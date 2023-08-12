@@ -1,24 +1,20 @@
 <script setup>
 defineProps([
-    'name',
-    'designation',
-    'avatar',
-    'about',
-    'age'
+    'member'
 ])
 </script>
 
 <template>
     <div class="items-center bg-gray-50 shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-            <img class="w-[200px]" :src="avatar" alt="Bonnie Avatar">
+            <img class="w-[200px]" :src="member.avatar" alt="Bonnie Avatar">
         </a>
         <div class="p-5">
             <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                <a href="#"> {{ name }} ({{ age }})</a>
+                <a href="#"> {{ member.name }}</a>
             </h3>
-            <span class="text-gray-500 dark:text-gray-400"> {{ designation }}</span>
-            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400"> {{ about }}</p>
+            <span class="text-gray-500 dark:text-gray-400"> {{ member.designation }}</span>
+            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400"> {{ member.about }}</p>
             <ul class="flex space-x-4 sm:mt-0">
                 <li>
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
